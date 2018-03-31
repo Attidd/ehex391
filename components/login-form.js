@@ -46,13 +46,13 @@ export default () => (
         <input
           id="uName"
           placeholder="Username"
-          className="box curmudgeon"
+          className="input"
           type="text"
         />
       </p>
       <p className="hov">
         Password <br />{" "}
-        <input type="password" placeholder="Password" className="box passwd" />
+        <input type="password" placeholder="Password" className="input" />
       </p>
       <Button primary>
         <Icon name="sign in" />
@@ -81,9 +81,10 @@ export default () => (
         text-align: center;
         border: 1px rgb(76,45,48) solid;
         border-radius: 8px;
-        background: rgba(179,179,179,0.9);
+        background: rgba(179,179,179,0.3);
         padding: 8px 10px;
         box-shadow: 0px 0px 5px #000000;
+        background-image: url("/static/uneven-texture.png");
 
       }
       h4 {
@@ -100,7 +101,7 @@ export default () => (
         box-shadow: 0px 0px 1px #000000;
       }
 
-      .box {
+      .input {
         position:relative;
         color: black;
         display: inline-block;
@@ -111,7 +112,7 @@ export default () => (
         -webkit-transition:0.5s;
         border-radius: 4px;
       }
-      .box:hover {
+      .input:hover {
         border: 2px solid black;
         color: red;
       }
