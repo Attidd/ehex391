@@ -9,7 +9,8 @@ const Footer = () => (
     <p>
       {" "}
       This is just the beginning. Separate this by columns, login page will have
-      SSO buttons at the bottom.
+      SSO buttons at the bottom. | <Icon name="twitter"/> | <Icon name="facebook f"/> |
+      <Icon name="google plus"/> |
     </p>
     <style jsx>{`
       p {
