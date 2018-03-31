@@ -4,7 +4,6 @@ import Meta from './meta';
 export default ({ children }) => (
   <div className="main">
     <Meta />
-    <Header />
 
     <div className="page">
       { children }

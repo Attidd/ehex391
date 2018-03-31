@@ -10,7 +10,8 @@ export default () => (
     <style jsx global>{`
       body {
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-        background: #eee;
+        background: #b3b3b3;
+
       }
       * {
         margin: 0;
