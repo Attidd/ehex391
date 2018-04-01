@@ -1,5 +1,5 @@
 import Nav from './nav'
-import Logo from './logo'
+import Logo from '../logo'
 import Link from 'next/link'
 
 export default () => (
@@ -53,7 +53,7 @@ export default () => (
         font-size: 11px;
         text-transform: uppercase;
         text-decoration: none;
-        color: #000;
+        color: #fff;
       }
       .login:hover {
         color: #fff;

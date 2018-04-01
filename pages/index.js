@@ -1,7 +1,6 @@
-import Page from '../components/page';
-import Login from './login';
+import Page from '../components/layout/page';
 export default () => (
   <div>
-      <Page> <Login /> </Page>
+      <Page> <p> This is the Index page </p> </Page>
   </div>
 )

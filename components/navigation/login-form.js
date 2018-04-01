@@ -2,7 +2,6 @@ import { Button, Icon } from "semantic-ui-react";
 import "semantic-ui-css/components/button.css";
 import "semantic-ui-css/components/icon.css";
 
-const Header = () => <div />;
 
 const Footer = () => (
   <div className="footer">
@@ -75,7 +74,7 @@ export default () => (
         @import url('https://fonts.googleapis.com/css?family=Crimson+Text');
         font-family: 'Crimson Text', serif;
         width: 40%;
-        margin-top:100px
+        margin-top:100px;
         margin-left: auto;
         margin-right: auto;
         height: 100%;
