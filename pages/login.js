@@ -1,7 +1,7 @@
-  import LoginForm from '../components/login-form';
-
+  import LoginForm from '../components/navigation/login-form';
+  import LoginLayout from '../components/layout/login';
 export default () => (
   <div>
-    <LoginForm/>
+    <LoginLayout> <LoginForm/> </LoginLayout>
   </div>
 )

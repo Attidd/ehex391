@@ -1,5 +1,5 @@
-import Header from './header'
-import Meta from './meta';
+import Header from '../navigation/header'
+import Meta from '../meta';
 
 export default ({ children }) => (
   <div className="main">
