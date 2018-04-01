@@ -1,7 +1,12 @@
 import Logo from "../logo";
 import Link from "next/link";
 import { Button, Icon, Modal, Header } from "semantic-ui-react";
-
+const inlineStyle = {
+  modal : {
+    marginLeft: 'auto',
+    marginRight: 'auto'
+  }
+};
 export default () => (
   <header>
     <div className="left">
@@ -15,8 +20,8 @@ export default () => (
       </Link>
     </div>
     <div className="right">
-      <Modal trigger={<a className="login">Support Modal</a>}>
-        <Modal.Header style={{color: "#eee", background: "#595959"}}>Testing Support Modal (Needs a header background color)</Modal.Header>
+      <Modal style={inlineStyle.modal} trigger={<a className="login">Support Modal</a>}>
+        <Modal.Header style={{color: "#eee", background: "black"}}>Testing Support Modal (Needs a header background color)</Modal.Header>
         <Modal.Content image>
           <div className="image">
             <Icon name="right arrow" />
@@ -27,7 +32,7 @@ export default () => (
         <p>The nested modal should have a form for people to fill out information with questions</p>
       </Modal.Description>
         </Modal.Content>
-         <Modal.Actions style={{background: 'black'}}>
+         <Modal.Actions style={{background: '#595959'}}>
         <Button primary icon>Press Escape or click outside modal for now <Icon name='right cross' /></Button>
         </Modal.Actions>
       </Modal>
@@ -39,9 +44,9 @@ export default () => (
         display: flex;
         font-size: 14px;
       }
-      .wut  {
-        background: black!important;
-      }
+.ui.page.modals.transition.visible {
+    display: flex !important;
+}
       .logo {
         margin: 4px 5px 2px 4px;
         display: inline-block;
