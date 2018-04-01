@@ -1,21 +1,36 @@
-import Logo from '../logo'
-import Link from 'next/link'
-
+import Logo from "../logo";
+import Link from "next/link";
+import { Button, Icon, Modal, Header } from "semantic-ui-react";
 
 export default () => (
   <header>
     <div className="left">
-     <Link prefetch href="/">
-       <a>
-         <span className="logo">
-           <Logo />
-         </span>
-         <span className="title">Home</span>
-       </a>
+      <Link prefetch href="/">
+        <a>
+          <span className="logo">
+            <Logo />
+          </span>
+          <span className="title">Home</span>
+        </a>
       </Link>
     </div>
     <div className="right">
-      <Link prefetch href="/login"><a className="login">Support Modal</a></Link>
+      <Modal trigger={<a className="login">Support Modal</a>}>
+        <Modal.Header style={{color: "#eee", background: "#595959"}}>Testing Support Modal (Needs a header background color)</Modal.Header>
+        <Modal.Content image>
+          <div className="image">
+            <Icon name="right arrow" />
+          </div>
+
+      <Modal.Description>
+        <p>Preferably, I will want a description to go with a list of text, and a nested modal.</p>
+        <p>The nested modal should have a form for people to fill out information with questions</p>
+      </Modal.Description>
+        </Modal.Content>
+         <Modal.Actions style={{background: 'black'}}>
+        <Button primary icon>Press Escape or click outside modal for now <Icon name='right cross' /></Button>
+        </Modal.Actions>
+      </Modal>
     </div>
 
     <style jsx>{`
@@ -23,6 +38,9 @@ export default () => (
         background: linear-gradient(#1e1e1e, #1a1a1a);
         display: flex;
         font-size: 14px;
+      }
+      .wut  {
+        background: black!important;
       }
       .logo {
         margin: 4px 5px 2px 4px;
@@ -45,7 +63,7 @@ export default () => (
         transition: all 0.3s;
       }
 
-            a {
+      a {
         display: inline-block;
         padding: 10px;
         font-size: 11px;
@@ -54,7 +72,7 @@ export default () => (
         color: #0b7;
         transition: all 1.3s;
       }
-      a .title:hover  {
+      a .title:hover {
         color: white;
       }
       a.login {
@@ -68,6 +86,7 @@ export default () => (
       }
       .login:hover {
         color: #0b7;
+        cursor: pointer;
       }
       .nav {
         display: inline-block;
@@ -87,4 +106,4 @@ export default () => (
       }
     `}</style>
   </header>
-  )
+);

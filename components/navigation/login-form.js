@@ -1,12 +1,12 @@
-import { Button, Icon } from "semantic-ui-react";
+import { Button, Icon, Modal, Header } from "semantic-ui-react";
 import "semantic-ui-css/components/button.css";
 import "semantic-ui-css/components/icon.css";
-
+import 'semantic-ui-css/components/modal.css';
+import 'semantic-ui-css/components/header.css';
 
 const Footer = () => (
   <div className="footer">
     <p>
-      {" "}
       This is just the beginning. Separate this by columns, login page will have
       SSO buttons at the bottom. | <Icon name="twitter"/> | <Icon name="facebook f"/> |
       <Icon name="google plus"/> |
@@ -58,6 +58,16 @@ export default () => (
         <Icon name="sign in" />
         Login
       </Button>
+          <Modal trigger={<Button>Show Modal</Button>}>
+      <Modal.Header>Select a Photo</Modal.Header>
+      <Modal.Content image>
+        <Modal.Description>
+          <Header>Default Profile Image</Header>
+          <p>We've found the following gravatar image associated with your e-mail address.</p>
+          <p>Is it okay to use this photo?</p>
+        </Modal.Description>
+      </Modal.Content>
+    </Modal>
 
       <style jsx>{`
 
