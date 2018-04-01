@@ -4,6 +4,18 @@ import "semantic-ui-css/components/icon.css";
 import 'semantic-ui-css/components/modal.css';
 import 'semantic-ui-css/components/header.css';
 
+const inlineStyle = {
+  modal : {
+    marginLeft: 'auto',
+    marginRight: 'auto',
+  },
+  header: {
+    color: "#eee",
+    background: "black",
+    textAlign: "center",
+  }
+};
+
 const Footer = () => (
   <div className="footer">
     <p>
@@ -58,8 +70,8 @@ export default () => (
         <Icon name="sign in" />
         Login
       </Button>
-          <Modal trigger={<Button>Register Modal</Button>}>
-      <Modal.Header className="mHeader">Register User</Modal.Header>
+          <Modal style={inlineStyle.modal} trigger={<Button>Register Modal</Button>}>
+      <Modal.Header style={inlineStyle.header} className="mHeader">Register User</Modal.Header>
       <Modal.Content>
         <Modal.Description>
           <p>This should show form data for creating a user</p>

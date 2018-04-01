@@ -4,7 +4,15 @@ import { Button, Icon, Modal, Header } from "semantic-ui-react";
 const inlineStyle = {
   modal : {
     marginLeft: 'auto',
-    marginRight: 'auto'
+    marginRight: 'auto',
+  },
+  header: {
+    color: "#eee",
+    background: "black",
+    textAlign: "center",
+  },
+  actions: {
+    background: '#595959'
   }
 };
 export default () => (
@@ -21,7 +29,7 @@ export default () => (
     </div>
     <div className="right">
       <Modal style={inlineStyle.modal} trigger={<a className="login">Support Modal</a>}>
-        <Modal.Header style={{color: "#eee", background: "black"}}>Testing Support Modal</Modal.Header>
+        <Modal.Header style={inlineStyle.header}>Testing Support Modal</Modal.Header>
         <Modal.Content image>
           <div className="image">
             <Icon name="right arrow" />
@@ -32,7 +40,7 @@ export default () => (
         <p>The nested modal should have a form for people to fill out information with questions</p>
       </Modal.Description>
         </Modal.Content>
-         <Modal.Actions style={{background: '#595959'}}>
+         <Modal.Actions style={inlineStyle.actions}>
         <Button primary icon>Press Escape or click outside modal for now <Icon name='right cross' /></Button>
         </Modal.Actions>
       </Modal>
