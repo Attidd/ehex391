@@ -21,7 +21,7 @@ export default () => (
     </div>
     <div className="right">
       <Modal style={inlineStyle.modal} trigger={<a className="login">Support Modal</a>}>
-        <Modal.Header style={{color: "#eee", background: "black"}}>Testing Support Modal (Needs a header background color)</Modal.Header>
+        <Modal.Header style={{color: "#eee", background: "black"}}>Testing Support Modal</Modal.Header>
         <Modal.Content image>
           <div className="image">
             <Icon name="right arrow" />
