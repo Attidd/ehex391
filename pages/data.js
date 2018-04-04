@@ -9,7 +9,7 @@ import {
   Segment,
   Table,
   Label,
-  Pagination
+  Popup
 } from "semantic-ui-react";
 import Page from "../components/layout/page";
 import users from "../data/users";
@@ -64,7 +64,12 @@ const Data = () => (
             <Divider section />
             <Segment.Group>
               <Segment color="red" textAlign="center">
-                <h3>Melee</h3>
+                  <Popup
+      trigger={<h3>Melee</h3>}
+      content='A melee class'
+      position="top center"
+    />
+
               </Segment>
               <Segment.Group>
                 <Segment>
@@ -78,7 +83,12 @@ const Data = () => (
                 </Segment>
               </Segment.Group>
               <Segment color="green" textAlign="center">
-                <h3>Ranged</h3>
+                                <Popup
+      trigger={<h3>Ranged</h3>}
+      content='A ranged class'
+      position="top center"
+    />
+
               </Segment>
               <Segment.Group>
                 <Segment>
@@ -92,7 +102,12 @@ const Data = () => (
                 </Segment>
               </Segment.Group>
               <Segment color="blue" textAlign="center">
-                <h3>Magic</h3>
+                                              <Popup
+      trigger={<h3>Magic</h3>}
+      content='A magic class'
+      position="top center"
+    />
+
               </Segment>
               <Segment.Group>
                 <Segment>
@@ -106,7 +121,12 @@ const Data = () => (
                 </Segment>
               </Segment.Group>
               <Segment color="purple" textAlign="center">
-                <h3>Mixed</h3>
+                                                            <Popup
+      trigger={<h3>Special</h3>}
+      content='A special class'
+      position="top center"
+    />
+
               </Segment>
               <Segment.Group>
                 <Segment>
@@ -151,7 +171,7 @@ const Data = () => (
               </Table.Header>
               <Table.Body>
                 <Table.Row>
-                  <Table.Cell data={users.userName}>
+                  <Table.Cell>
                     <Label color="red" ribbon>
                       Almid
                     </Label>
@@ -265,11 +285,12 @@ const Data = () => (
                       Soldier
                     </Label>
                   </Table.Cell>
-                  <Table.Cell>Mixed</Table.Cell>
+                  <Table.Cell>Special</Table.Cell>
                   <Table.Cell>16</Table.Cell>
                 </Table.Row>
               </Table.Body>
             </Table>
+
             <Segment textAlign="center" attached="bottom" inverted>
               Add a pop-up tooltip that mentions a color represents class role.
             </Segment>
