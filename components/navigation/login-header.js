@@ -5,6 +5,7 @@ const inlineStyle = {
   modal : {
     marginLeft: 'auto',
     marginRight: 'auto',
+    marginTop: '5%',
   },
   header: {
     color: "#eee",
@@ -41,7 +42,7 @@ export default () => (
       </Modal.Description>
         </Modal.Content>
          <Modal.Actions style={inlineStyle.actions}>
-        <Button primary icon>Press Escape or click outside modal for now <Icon name='right cross' /></Button>
+        <Button primary icon>Press Escape or click outside modal for now <Icon name='right arrow' /></Button>
         </Modal.Actions>
       </Modal>
     </div>
@@ -55,6 +56,7 @@ export default () => (
 .ui.page.modals.transition.visible {
     display: flex !important;
 }
+
       .logo {
         margin: 4px 5px 2px 4px;
         display: inline-block;

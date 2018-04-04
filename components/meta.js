@@ -1,4 +1,6 @@
 import Head from 'next/head'
+import 'semantic-ui-css/semantic.css';
+
 
 export default () => (
   <div>
@@ -12,7 +14,7 @@ export default () => (
     <style jsx global>{`
       body {
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-        background-color: #eeeeee;
+        background-color: #f7f7f7;
       }
       * {
         margin: 0;
