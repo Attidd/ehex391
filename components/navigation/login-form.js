@@ -8,6 +8,7 @@ const inlineStyle = {
   modal : {
     marginLeft: 'auto',
     marginRight: 'auto',
+    marginTop: '5%',
   },
   header: {
     color: "#eee",
