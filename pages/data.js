@@ -12,6 +12,7 @@ import {
 } from "semantic-ui-react";
 import Page from "../components/layout/page";
 import users from "../data/users";
+import jobs from "../data/jobs";
 
 const styleGrid1 = { width: 130, height: 130 };
 const sizeGrid1 = "big";
@@ -56,7 +57,7 @@ const Data = () => (
         <Grid columns={3}>
           <Grid.Column>
             <Header textAlign="center" as="h2">
-              Classes
+              Classes ({jobs.length})
             </Header>
             <Divider section />
             <Segment.Group>

@@ -1,4 +1,4 @@
-const classes = [
+const jobs = [
   {
     "className": "Knight",
     "classType": "Melee",
@@ -47,4 +47,4 @@ const classes = [
   }
 ];
 
-export default "class";
+export default jobs;
