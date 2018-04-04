@@ -1,4 +1,4 @@
-const class = [
+const classes = [
   {
     "className": "Knight",
     "classType": "Melee",

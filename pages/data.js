@@ -131,7 +131,7 @@ const Data = () => (
 
           <Grid.Column>
             <Header textAlign="center" as="h2">
-              There are {users.length} users.
+              Users ({users.length})
             </Header>
             <Divider section />
 
@@ -280,7 +280,7 @@ const Data = () => (
           </Grid.Column>
 
           <Grid.Column>
-            <Header as="h2">Weapons</Header>
+            <Header textAlign="center" as="h2">Weapons</Header>
             <Divider section />
             <Segment color="orange" attached="top">
               {users[0].userName}{" "}
@@ -294,8 +294,8 @@ const Data = () => (
             <Segment color="orange" attached="bottom">
               {users[3].userName}
             </Segment>
-            <Header as="h2">Misc [Non-Primary]</Header>
-            <Header as="h4" attached="top" block>
+            <Header textAlign="center" as="h2">Misc [Non-Primary]</Header>
+            <Header textAlign="center" as="h4" attached="top" block>
               Throwable
             </Header>
             <Menu attached="top" compact widths={3}>
@@ -318,7 +318,7 @@ const Data = () => (
               <Menu.Item as="a">Item</Menu.Item>
               <Menu.Item as="a">Item</Menu.Item>
             </Menu>
-            <Header as="h4" attached block>
+            <Header textAlign="center" as="h4" attached block>
               Utility
             </Header>
             <Menu compact widths={3}>
