@@ -62,7 +62,7 @@ const Data = () => (
             <Divider section />
             <Segment.Group>
               <Segment color="red" textAlign="center">
-                <p>Melee</p>
+                <h3>Melee</h3>
               </Segment>
               <Segment.Group>
                 <Segment>
@@ -76,7 +76,7 @@ const Data = () => (
                 </Segment>
               </Segment.Group>
               <Segment color="green" textAlign="center">
-                <p>Ranged</p>
+                <h3>Ranged</h3>
               </Segment>
               <Segment.Group>
                 <Segment>
@@ -90,7 +90,7 @@ const Data = () => (
                 </Segment>
               </Segment.Group>
               <Segment color="blue" textAlign="center">
-                <p>Magic</p>
+                <h3>Magic</h3>
               </Segment>
               <Segment.Group>
                 <Segment>
@@ -104,7 +104,7 @@ const Data = () => (
                 </Segment>
               </Segment.Group>
               <Segment color="purple" textAlign="center">
-                <p>Mixed</p>
+                <h3>Mixed</h3>
               </Segment>
               <Segment.Group>
                 <Segment>
@@ -283,16 +283,16 @@ const Data = () => (
           <Grid.Column>
             <Header textAlign="center" as="h2">Weapons</Header>
             <Divider section />
-            <Segment color="orange" attached="top">
+            <Segment textAlign="center" color="orange" attached="top">
               {users[0].userName}{" "}
             </Segment>
-            <Segment color="orange" attached>
+            <Segment textAlign="center" color="orange" attached>
               {users[1].userName}
             </Segment>
-            <Segment color="orange" attached>
+            <Segment textAlign="center" color="orange" attached>
               {users[2].userName}
             </Segment>
-            <Segment color="orange" attached="bottom">
+            <Segment textAlign="center" color="orange" attached="bottom">
               {users[3].userName}
             </Segment>
             <Header textAlign="center" as="h2">Misc [Non-Primary]</Header>
