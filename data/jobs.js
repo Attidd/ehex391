@@ -17,7 +17,7 @@ const jobs = [
   },
   {
     "className": "Beast Master",
-    "classType": "Mixed",
+    "classType": "Special",
   },
   {
     "className": "Kunoichi",
@@ -37,8 +37,18 @@ const jobs = [
   },
   {
     "className": "Soldier",
-    "classType": "Mixed",
+    "classType": "Special",
     "description": "This class has a versatile skillset and branches into utility(support), close-range(melee/shotgun), long-range(gunner > sniper)",
+  },
+  {
+    "className": "Sniper",
+    "classType": "Ranged",
+    "description": "",
+  },
+  {
+    "className": "Fighter",
+    "classType": "Melee",
+    "description": "",
   },
   {
     "className": "GreatAxe",

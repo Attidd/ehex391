@@ -8,11 +8,13 @@ import {
   Message,
   Segment,
   Table,
-  Label
+  Label,
+  Pagination
 } from "semantic-ui-react";
 import Page from "../components/layout/page";
 import users from "../data/users";
 import jobs from "../data/jobs";
+import weapons from"../data/weapons";
 
 const styleGrid1 = { width: 130, height: 130 };
 const sizeGrid1 = "big";
@@ -137,9 +139,9 @@ const Data = () => (
             <Divider section />
 
             <Menu attached="top" compact inverted widths={3}>
-              <Menu.Item as="a">Users</Menu.Item>
-              <Menu.Item as="a">Classes</Menu.Item>
-              <Menu.Item as="a">Weapons</Menu.Item>
+              <Menu.Item as="a">Users ({users.length})</Menu.Item>
+              <Menu.Item as="a">Classes ({jobs.length})</Menu.Item>
+              <Menu.Item as="a">Weapons ({weapons.length})</Menu.Item>
             </Menu>
             <Table compact attached inverted selectable>
               <Table.Header tableData={users}>
@@ -177,7 +179,7 @@ const Data = () => (
                 </Table.Row>
               </Table.Body>
             </Table>
-            <Segment textAlign="center" attached="bottom" inverted>
+        <Segment textAlign="center" attached="bottom" inverted>
               Active/Inactive | Level | Hours-Active | Last Log In.
             </Segment>
             <Divider section />
@@ -281,19 +283,19 @@ const Data = () => (
           </Grid.Column>
 
           <Grid.Column>
-            <Header textAlign="center" as="h2">Weapons</Header>
+            <Header textAlign="center" as="h2">Weapons ({weapons.length})</Header>
             <Divider section />
             <Segment textAlign="center" color="orange" attached="top">
-              {users[0].userName}{" "}
+              {weapons[0].name}{" "}
             </Segment>
             <Segment textAlign="center" color="orange" attached>
-              {users[1].userName}
+              {weapons[1].name}
             </Segment>
             <Segment textAlign="center" color="orange" attached>
-              {users[2].userName}
+              {weapons[2].name}
             </Segment>
             <Segment textAlign="center" color="orange" attached="bottom">
-              {users[3].userName}
+              {weapons[3].name}
             </Segment>
             <Header textAlign="center" as="h2">Misc [Non-Primary]</Header>
             <Header textAlign="center" as="h4" attached="top" block>
