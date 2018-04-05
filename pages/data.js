@@ -9,16 +9,19 @@ import {
   Segment,
   Table,
   Label,
-  Popup
+  Popup,
+  Icon
 } from "semantic-ui-react";
 import Page from "../components/layout/page";
 import users from "../data/users";
 import jobs from "../data/jobs";
-import weapons from"../data/weapons";
+import weapons from "../data/weapons";
 
 const styleGrid1 = { width: 130, height: 130 };
 const sizeGrid1 = "big";
+const thisRowClick = (user) => alert(user);
 const Data = () => (
+
   <div>
     <Page>
       <Container style={{ padding: "5em 0em" }}>
@@ -31,20 +34,35 @@ const Data = () => (
               </Segment>
             </Grid.Column>
             <Grid.Column>
-              <Segment color="orange" textAlign="center" size={sizeGrid1} inverted>
+              <Segment
+                color="orange"
+                textAlign="center"
+                size={sizeGrid1}
+                inverted
+              >
                 Add Weapon
               </Segment>
             </Grid.Column>
 
             <Grid.Column>
-              <Segment color="grey" textAlign="center" size={sizeGrid1}inverted>
+              <Segment
+                color="grey"
+                textAlign="center"
+                size={sizeGrid1}
+                inverted
+              >
                 {" "}
                 Add Armor
               </Segment>
             </Grid.Column>
 
             <Grid.Column>
-              <Segment color="teal" textAlign="center" size={sizeGrid1} inverted>
+              <Segment
+                color="teal"
+                textAlign="center"
+                size={sizeGrid1}
+                inverted
+              >
                 Add Note
               </Segment>
             </Grid.Column>
@@ -64,12 +82,11 @@ const Data = () => (
             <Divider section />
             <Segment.Group>
               <Segment color="red" textAlign="center">
-                  <Popup
-      trigger={<h3>Melee</h3>}
-      content='A melee class'
-      position="top center"
-    />
-
+                <Popup
+                  trigger={<h3>Melee</h3>}
+                  content="A melee class"
+                  position="top center"
+                />
               </Segment>
               <Segment.Group>
                 <Segment>
@@ -83,12 +100,11 @@ const Data = () => (
                 </Segment>
               </Segment.Group>
               <Segment color="green" textAlign="center">
-                                <Popup
-      trigger={<h3>Ranged</h3>}
-      content='A ranged class'
-      position="top center"
-    />
-
+                <Popup
+                  trigger={<h3>Ranged</h3>}
+                  content="A ranged class"
+                  position="top center"
+                />
               </Segment>
               <Segment.Group>
                 <Segment>
@@ -102,12 +118,11 @@ const Data = () => (
                 </Segment>
               </Segment.Group>
               <Segment color="blue" textAlign="center">
-                                              <Popup
-      trigger={<h3>Magic</h3>}
-      content='A magic class'
-      position="top center"
-    />
-
+                <Popup
+                  trigger={<h3>Magic</h3>}
+                  content="A magic class"
+                  position="top center"
+                />
               </Segment>
               <Segment.Group>
                 <Segment>
@@ -121,12 +136,11 @@ const Data = () => (
                 </Segment>
               </Segment.Group>
               <Segment color="purple" textAlign="center">
-                                                            <Popup
-      trigger={<h3>Special</h3>}
-      content='A special class'
-      position="top center"
-    />
-
+                <Popup
+                  trigger={<h3>Special</h3>}
+                  content="A special class"
+                  position="top center"
+                />
               </Segment>
               <Segment.Group>
                 <Segment>
@@ -167,39 +181,25 @@ const Data = () => (
               <Table.Header tableData={users}>
                 <Table.HeaderCell>Name</Table.HeaderCell>
                 <Table.HeaderCell>Email</Table.HeaderCell>
-                <Table.HeaderCell>Characters</Table.HeaderCell>
+                <Table.HeaderCell>Status</Table.HeaderCell>
               </Table.Header>
               <Table.Body>
-                <Table.Row>
-                  <Table.Cell>
-                    <Label color="red" ribbon>
-                      Almid
-                    </Label>
-                  </Table.Cell>
-                  <Table.Cell>almid@example.com</Table.Cell>
-                  <Table.Cell>2</Table.Cell>
-                </Table.Row>
-                <Table.Row>
-                  <Table.Cell>
-                    <Label color="white" ribbon>
-                      Cell
-                    </Label>
-                  </Table.Cell>
-                  <Table.Cell>Cell</Table.Cell>
-                  <Table.Cell>Cell</Table.Cell>
-                </Table.Row>
-                <Table.Row>
-                  <Table.Cell>
-                    <Label color="blue" ribbon>
-                      Cell
-                    </Label>
-                  </Table.Cell>
-                  <Table.Cell>Cell</Table.Cell>
-                  <Table.Cell>Cell</Table.Cell>
-                </Table.Row>
+                {users.map(user => (
+                  <Table.Row key={user.id}>
+                    <Table.Cell onClick={thisRowClick.bind(this, user.userName)}>
+                      <Label color={user.active? 'red' : 'blue'} ribbon>
+                        {user.userName}
+                      </Label>
+                    </Table.Cell>
+                    <Table.Cell>{user.email}</Table.Cell>
+                    <Table.Cell textAlign="center" >
+                    {user.active?  'Active' : <div><Icon name='attention' color="red"/>Disabled</div>}
+                    </Table.Cell>
+                  </Table.Row>
+                ))}
               </Table.Body>
             </Table>
-        <Segment textAlign="center" attached="bottom" inverted>
+            <Segment textAlign="center" attached="bottom" inverted>
               Active/Inactive | Level | Hours-Active | Last Log In.
             </Segment>
             <Divider section />
@@ -304,7 +304,9 @@ const Data = () => (
           </Grid.Column>
 
           <Grid.Column>
-            <Header textAlign="center" as="h2">Weapons ({weapons.length})</Header>
+            <Header textAlign="center" as="h2">
+              Weapons ({weapons.length})
+            </Header>
             <Divider section />
             <Segment textAlign="center" color="orange" attached="top">
               {weapons[0].name}{" "}
@@ -318,7 +320,9 @@ const Data = () => (
             <Segment textAlign="center" color="orange" attached="bottom">
               {weapons[3].name}
             </Segment>
-            <Header textAlign="center" as="h2">Misc [Non-Primary]</Header>
+            <Header textAlign="center" as="h2">
+              Misc [Non-Primary]
+            </Header>
             <Header textAlign="center" as="h4" attached="top" block>
               Throwable
             </Header>
@@ -350,7 +354,7 @@ const Data = () => (
               <Menu.Item as="a">Trap</Menu.Item>
               <Menu.Item as="a">Rope</Menu.Item>
             </Menu>{" "}
-                        <Message
+            <Message
               attached="bottom"
               header="Optional"
               content="Add the items to a datagrid and give them their own separate page if they get too large to manage."
