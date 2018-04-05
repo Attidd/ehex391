@@ -19,9 +19,8 @@ import weapons from "../data/weapons";
 
 const styleGrid1 = { width: 130, height: 130 };
 const sizeGrid1 = "big";
-const thisRowClick = (user) => alert(user);
+const thisRowClick = user => alert(user);
 const Data = () => (
-
   <div>
     <Page>
       <Container style={{ padding: "5em 0em" }}>
@@ -186,14 +185,29 @@ const Data = () => (
               <Table.Body>
                 {users.map(user => (
                   <Table.Row key={user.id}>
-                    <Table.Cell onClick={thisRowClick.bind(this, user.userName)}>
-                      <Label color={user.level < 5 ? 'red' : user.level < 10 ? 'blue': 'white'} ribbon>
+                    <Table.Cell
+                      onClick={thisRowClick.bind(this, user.userName)}
+                    >
+                      <Label
+                        color={
+                          user.level < 5
+                            ? "red"
+                            : user.level < 10 ? "blue" : "white"
+                        }
+                        ribbon
+                      >
                         {user.userName}
                       </Label>
                     </Table.Cell>
                     <Table.Cell>{user.email}</Table.Cell>
-                    <Table.Cell textAlign="center" >
-                    {user.active?  'Active' : <div><Icon name='attention' color="red"/>Disabled</div>}
+                    <Table.Cell textAlign="center">
+                      {user.active ? (
+                        "Active"
+                      ) : (
+                        <div>
+                          <Icon name="attention" color="red" />Disabled
+                        </div>
+                      )}
                     </Table.Cell>
                   </Table.Row>
                 ))}
@@ -212,15 +226,15 @@ const Data = () => (
               </Table.Header>
               <Table.Body>
                 {weapons.map(weapon => (
-                <Table.Row key={weapons.id}>
-                  <Table.Cell onClick={thisRowClick.bind(this, weapon.name)}>
-                    <Label color="orange" ribbon>
-                      {weapon.name}
-                    </Label>
-                  </Table.Cell>
-                  <Table.Cell>{weapon.type}</Table.Cell>
-                  <Table.Cell>{weapon.cost}</Table.Cell>
-                </Table.Row>
+                  <Table.Row key={weapons.id}>
+                    <Table.Cell onClick={thisRowClick.bind(this, weapon.name)}>
+                      <Label color="orange" ribbon>
+                        {weapon.name}
+                      </Label>
+                    </Table.Cell>
+                    <Table.Cell>{weapon.type}</Table.Cell>
+                    <Table.Cell>{weapon.cost}</Table.Cell>
+                  </Table.Row>
                 ))}
               </Table.Body>
             </Table>
