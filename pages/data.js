@@ -211,33 +211,17 @@ const Data = () => (
                 <Table.HeaderCell>Cost (Coins)</Table.HeaderCell>
               </Table.Header>
               <Table.Body>
-                <Table.Row>
-                  <Table.Cell>
+                {weapons.map(weapon => (
+                <Table.Row key={weapons.id}>
+                  <Table.Cell onClick={thisRowClick.bind(this, weapon.name)}>
                     <Label color="orange" ribbon>
-                      Bronzesword
+                      {weapon.name}
                     </Label>
                   </Table.Cell>
-                  <Table.Cell>Sword</Table.Cell>
-                  <Table.Cell>2,100</Table.Cell>
+                  <Table.Cell>{weapon.type}</Table.Cell>
+                  <Table.Cell>{weapon.cost}</Table.Cell>
                 </Table.Row>
-                <Table.Row>
-                  <Table.Cell>
-                    <Label color="orange" ribbon>
-                      Shortsword
-                    </Label>
-                  </Table.Cell>
-                  <Table.Cell>Sword</Table.Cell>
-                  <Table.Cell>210</Table.Cell>
-                </Table.Row>
-                <Table.Row>
-                  <Table.Cell>
-                    <Label color="orange" ribbon>
-                      Longsword
-                    </Label>
-                  </Table.Cell>
-                  <Table.Cell>Sword</Table.Cell>
-                  <Table.Cell>830</Table.Cell>
-                </Table.Row>
+                ))}
               </Table.Body>
             </Table>
             <Segment textAlign="center" attached="bottom" inverted>
