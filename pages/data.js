@@ -178,7 +178,7 @@ const Data = () => (
               <Menu.Item as="a">Weapons ({weapons.length})</Menu.Item>
             </Menu>
             <Table compact attached inverted selectable>
-              <Table.Header tableData={users}>
+              <Table.Header>
                 <Table.HeaderCell>Name</Table.HeaderCell>
                 <Table.HeaderCell>Email</Table.HeaderCell>
                 <Table.HeaderCell>Status</Table.HeaderCell>
