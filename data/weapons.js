@@ -21,7 +21,7 @@ const weapons = [
     id: "4",
     name: "Ironsword",
     cost: "2,800",
-    type: "Sword"
+    type: "Hammer"
   }
 ];
 
