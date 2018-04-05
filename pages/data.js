@@ -187,7 +187,7 @@ const Data = () => (
                 {users.map(user => (
                   <Table.Row key={user.id}>
                     <Table.Cell onClick={thisRowClick.bind(this, user.userName)}>
-                      <Label color={user.active? 'red' : 'blue'} ribbon>
+                      <Label color={user.level < 5 ? 'red' : user.level < 10 ? 'blue': 'white'} ribbon>
                         {user.userName}
                       </Label>
                     </Table.Cell>

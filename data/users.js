@@ -6,6 +6,7 @@ const users = [
     numberID: "195361",
     created_at: "2018-01-01",
     characters: 3,
+    level: 1,
     active: true
   },
   {
@@ -15,6 +16,7 @@ const users = [
     numberID: "415622",
     created_at: "2018-04-02",
     characters: 4,
+    level: 5,
     active: false
   },
   {
@@ -24,6 +26,7 @@ const users = [
     numberID: "180512",
     created_at: "2018-03-01",
     characters: 2,
+    level: 10,
     active: true
   },
   {
@@ -33,6 +36,7 @@ const users = [
     numberID: "918337",
     created_at: "2018-04-03",
     characters: 1,
+    level: 3,
     active: false
   }
 ];
