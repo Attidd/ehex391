@@ -1,6 +1,6 @@
 # ehex391 
 
-ehex391 is a Browser Game.  It is currently in development and will receive drastic overhauls to the architecture.  This is purely meant as a way to learn ReactJS while having fun doing it.
+Purely meant as a way to learn ReactJS
 
 
 Among the Architecture I'm currently using:
